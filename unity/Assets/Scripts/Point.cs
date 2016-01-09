@@ -4,8 +4,8 @@ namespace MrStarBase
 {
 	public class Point : IEquatable<Point>
 	{
-		public readonly int x;
-		public readonly int y;
+		readonly int x;
+		readonly int y;
 
 		public int X { get { return x; } }
 
