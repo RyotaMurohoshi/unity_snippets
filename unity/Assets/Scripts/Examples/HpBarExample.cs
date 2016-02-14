@@ -11,10 +11,6 @@ public class HpBarExample : MonoBehaviour
 
     void Start()
     {
-        floatValue.Select<float, float>(Mathf.Clamp01).Subscribe(value =>
-        {
-            Debug.Log(value);
-            hpBar.SetRate(value);
-        });
+        floatValue.Select<float, float>(Mathf.Clamp01).Subscribe(hpBar.SetRate);
     }
 }
