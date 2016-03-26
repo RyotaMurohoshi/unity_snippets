@@ -13,11 +13,7 @@ public class CustomYieldInstructionExample : MonoBehaviour
     {
         StartCoroutine(WaitUntilCoroutine());
         StartCoroutine(WaitWhileCoroutine());
-<<<<<<< 4c8db37d471b502ea05afde7ed54f4f7bcc2d007
-        StartCoroutine(MyWaitForSecondsCoroutine());
-=======
         StartCoroutine(RepeatMyWaitForSecondsCoroutine(count: 3, seconds:1.0F));
->>>>>>> created MyWaitForSeconds
     }
 
     IEnumerator WaitUntilCoroutine()
@@ -34,14 +30,6 @@ public class CustomYieldInstructionExample : MonoBehaviour
         Debug.Log("WaitWhileCoroutine Finish");
     }
 
-<<<<<<< 4c8db37d471b502ea05afde7ed54f4f7bcc2d007
-    IEnumerator MyWaitForSecondsCoroutine()
-    {
-        Debug.Log("MyWaitForSecondsCoroutine Begin : " + System.DateTime.Now);
-        yield return new MyWaitForSeconds(5.0F);
-        Debug.Log("MyWaitForSecondsCoroutine Finish : " + System.DateTime.Now);
-    }
-=======
     IEnumerator MyWaitForSecondsCoroutine(float seconds)
     {
         Debug.Log("MyWaitForSecondsCoroutine Begin : " + System.DateTime.Now);
@@ -56,5 +44,4 @@ public class CustomYieldInstructionExample : MonoBehaviour
             yield return MyWaitForSecondsCoroutine(seconds);
         }
     }
->>>>>>> created MyWaitForSeconds
 }
