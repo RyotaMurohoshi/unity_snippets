@@ -25,5 +25,5 @@ namespace System.Linq
                     yield return resultSelector(e1.Current, e2.Current);
                 }
         }
--    }
+    }
 }
