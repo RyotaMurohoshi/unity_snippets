@@ -4,11 +4,19 @@ using System;
 [Serializable]
 public class Data
 {
-	[SerializeField] Color color;
+    public Data(Color color, string name)
+    {
+        this.color = color;
+        this.name = name;
+    }
 
-	[SerializeField] String name;
+    [SerializeField]
+    Color color;
 
-	public Color Color { get { return color; } }
+    [SerializeField]
+    String name;
 
-	public String Name { get { return name; } }
+    public Color Color { get { return color; } }
+
+    public String Name { get { return name; } }
 }
