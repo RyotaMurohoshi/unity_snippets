@@ -49,5 +49,29 @@ namespace System.Linq
                     yield return resultSelector(e1.Current, e2.Current, counter++);
                 }
         }
+
+        public static void ForEachZip<TFirst, TSecond>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second, Action<TFirst, TSecond> resultAction)
+        {
+            if (first == null) throw new ArgumentNullException("first");
+            if (second == null) throw new ArgumentNullException("second");
+            if (resultAction == null) throw new ArgumentNullException("resultAction");
+
+            foreach (var it in first.Zip(second, (fst, snd) => new { fst, snd }))
+            {
+                resultAction(it.fst, it.snd);
+            }
+        }
+
+        public static void ForEachZip<TFirst, TSecond>(this IEnumerable<TFirst> first, IEnumerable<TSecond> second, Action<TFirst, TSecond, int> resultAction)
+        {
+            if (first == null) throw new ArgumentNullException("first");
+            if (second == null) throw new ArgumentNullException("second");
+            if (resultAction == null) throw new ArgumentNullException("resultAction");
+
+            foreach (var it in first.Zip(second, (fst, snd, index) => new { fst, snd, index }))
+            {
+                resultAction(it.fst, it.snd, it.index);
+            }
+        }
     }
 }
