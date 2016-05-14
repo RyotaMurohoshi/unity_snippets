@@ -9,8 +9,13 @@ public class HpBarExample : MonoBehaviour
     [SerializeField]
     HpBar hpBar;
 
+    [SerializeField]
+    HpIndicator hpIndicator;
+
     void Start()
     {
-        floatValue.Select<float, float>(Mathf.Clamp01).Subscribe(hpBar.SetRate);
+        hpIndicator.Initialize();
+        floatValue.Select<float, float>(Mathf.Clamp01).Subscribe(hpIndicator.SetValue).AddTo(gameObject);
+        floatValue.Select<float, float>(Mathf.Clamp01).Subscribe(hpBar.SetRate).AddTo(gameObject);
     }
 }
