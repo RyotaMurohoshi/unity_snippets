@@ -62,6 +62,12 @@ namespace MrStarBase
         }
     }
 
+    class Team
+    {
+        public string name;
+        public int age;
+    }
+
     class Person
     {
         public string name;
