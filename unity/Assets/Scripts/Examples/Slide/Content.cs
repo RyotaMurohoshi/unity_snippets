@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using System;
 
-[SerializeField]
+[Serializable]
 public class Content
 {
     public Content(
@@ -20,13 +21,14 @@ public class Content
     string title;
     public string Title { get { return title; } }
 
+    [Multiline(5)]
     [SerializeField]
     string sentence;
     public string Sentence { get { return sentence; } }
 
     [SerializeField]
     Color textColor = Color.white;
-    public Color TextCollor { get { return textColor; } }
+    public Color TextColor { get { return textColor; } }
 
     [SerializeField]
     Color backgroundColor = Color.black;
