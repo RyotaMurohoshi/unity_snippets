@@ -17,13 +17,14 @@ public static class Build
         PlayerSettings.Android.keyaliasPass = signConfig.keyaliasPass;
 
         var outputPath = string.Format("{0}_{1}.apk", PlayerSettings.bundleIdentifier, PlayerSettings.bundleVersion);
-        var scenes = EditorBuildSettings
+        var scenePaths = EditorBuildSettings
             .scenes
             .Where(it => it.enabled)
+            .Select(it => it.path)
             .ToArray();
 
         string errorMessage = BuildPipeline.BuildPlayer(
-            levels: scenes,
+            levels: scenePaths,
             locationPathName: outputPath,
             target: BuildTarget.Android,
             options: BuildOptions.None);
