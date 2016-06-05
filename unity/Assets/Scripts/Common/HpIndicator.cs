@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class HpIndicator : MonoBehaviour
 {
@@ -31,6 +32,22 @@ public class HpIndicator : MonoBehaviour
         if (backgroundSlider)
         {
             backgroundSlider.value = clampedValue;
+        }
+    }
+
+    public Tweener AnimateValue(float value)
+    {
+        var clampedValue = Mathf.Clamp(value: value, min: 0, max: maxValue);
+
+        var frontTween = frontSlider.DOValue(endValue: clampedValue, duration: 0.3F);
+
+        if (backgroundSlider)
+        {
+            return backgroundSlider.DOValue(endValue: clampedValue, duration: 0.35F).SetDelay(0.35F);
+        }
+        else
+        {
+            return frontTween;
         }
     }
 }
