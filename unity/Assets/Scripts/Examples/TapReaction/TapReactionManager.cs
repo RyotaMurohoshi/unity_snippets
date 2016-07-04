@@ -3,6 +3,8 @@ using System.Linq;
 
 public class TapReactionManager : MonoBehaviour
 {
+    [SerializeField]
+    TapReaction tapReactionPrefab;
 
     void Update()
     {
@@ -22,7 +24,8 @@ public class TapReactionManager : MonoBehaviour
 
     void OnTap(Vector3 position)
     {
-        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = Camera.main.ScreenToWorldPoint(position);
+        var tapReaction = Instantiate(tapReactionPrefab);
+        tapReaction.transform.position = Camera.main.ScreenToWorldPoint(position);
+        tapReaction.Show();
     }
 }
