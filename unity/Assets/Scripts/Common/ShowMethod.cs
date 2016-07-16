@@ -2,39 +2,82 @@
 using System.Reflection;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 public class ShowMethod : MonoBehaviour
 {
     void Start()
     {
-        var assembly = Assembly.Load("UnityEngine.dll");
-
-        ShowType(typeof(Vector3));
+        var info = new AssemblyDebugInfo("UnityEngine.dll");
+        Debug.Log(JsonUtility.ToJson(info, true));
     }
+}
 
-    void ShowAllMethods(Assembly assembly)
+[Serializable]
+class AssemblyDebugInfo
+{
+    public string AssemblyName;
+    public List<TypeDebugInfo> Types;
+
+    public AssemblyDebugInfo(string assemblyName)
     {
-        var types = assembly
+        var assembly = Assembly.Load(assemblyName);
+        AssemblyName = assembly.FullName;
+        Types = assembly
             .GetTypes()
             .Where(it => it.IsPublic)
-            .ToArray();
-
-        foreach (var type in types)
-        {
-            ShowType(type);
-        }
+            .Select(it => new TypeDebugInfo(it))
+            .ToList();
     }
+}
 
-    void ShowType(Type type)
+[Serializable]
+class TypeDebugInfo
+{
+    public string Name;
+    public List<ConstructorDebugInfo> Constructors;
+    public List<MethodDebugInfo> Methods;
+
+    private static readonly BindingFlags Flags = BindingFlags.Instance
+        | BindingFlags.Static
+        | BindingFlags.DeclaredOnly
+        | BindingFlags.Public;
+
+    public TypeDebugInfo(Type type)
     {
-        var flags = BindingFlags.Instance
-            | BindingFlags.Static
-            | BindingFlags.DeclaredOnly
-            | BindingFlags.Public;
+        Name = type.FullName;
+        Constructors = type.GetConstructors().Select(it => new ConstructorDebugInfo(it)).ToList();
+        Methods = type.GetMethods(Flags).Select(it => new MethodDebugInfo(it)).ToList();
+    }
+}
 
-        foreach (var method in type.GetMethods(flags))
-        {
-            Debug.Log(method.Name);
-        }
+[Serializable]
+class ConstructorDebugInfo
+{
+    public List<string> ParameterTypeNames;
+
+    public ConstructorDebugInfo(ConstructorInfo constructorInfo)
+    {
+        ParameterTypeNames = constructorInfo
+            .GetParameters()
+            .Select(it => it.ParameterType.Name)
+            .ToList();
+    }
+}
+
+[Serializable]
+class MethodDebugInfo
+{
+    public string MethodName;
+    public string ReturnTypeName;
+    public List<string> ParameterTypeNames;
+    public bool IsStatic;
+
+    public MethodDebugInfo(MethodInfo methodInfo)
+    {
+        MethodName = methodInfo.Name;
+        ReturnTypeName = methodInfo.ReturnType.Name;
+        ParameterTypeNames = methodInfo.GetParameters().Select(it => it.ParameterType.Name).ToList();
+        IsStatic = methodInfo.IsStatic;
     }
 }
