@@ -1,18 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Reflection;
 using System.Linq;
-using System;
 using System.Collections.Generic;
-using System.IO;
-
-public class ShowMethod : MonoBehaviour
-{
-    void Start()
-    {
-        var info = new AssemblyDebugInfo("UnityEngine.dll");
-        File.WriteAllText("result.json", JsonUtility.ToJson(info, true));
-    }
-}
 
 [Serializable]
 class AssemblyDebugInfo
