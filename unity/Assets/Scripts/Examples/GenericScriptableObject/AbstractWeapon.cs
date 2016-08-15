@@ -9,4 +9,9 @@ public class AbstractWeapon : ScriptableObject
     [SerializeField]
     string weaponName;
     public string WeaponName { get { return weaponName; } }
+
+    [ZeroToMaxRangeProperty(100)]
+    [SerializeField]
+    float price;
+    public float Price { get { return price; } }
 }
