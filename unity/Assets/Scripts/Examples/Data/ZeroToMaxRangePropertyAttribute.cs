@@ -4,11 +4,21 @@
 using UnityEditor;
 #endif
 
-public class ZeroToMaxRangePropertyAttribute : PropertyAttribute
+public class FloatZeroToMaxRangePropertyAttribute : PropertyAttribute
 {
     public float max;
 
-    public ZeroToMaxRangePropertyAttribute(float max)
+    public FloatZeroToMaxRangePropertyAttribute(float max)
+    {
+        this.max = max;
+    }
+}
+
+public class IntZeroToMaxRangePropertyAttribute : PropertyAttribute
+{
+    public int max;
+
+    public IntZeroToMaxRangePropertyAttribute(int max)
     {
         this.max = max;
     }
@@ -16,16 +26,31 @@ public class ZeroToMaxRangePropertyAttribute : PropertyAttribute
 
 #if UNITY_EDITOR
 
-[CustomPropertyDrawer(typeof(ZeroToMaxRangePropertyAttribute))]
-public class ZeroToMaxRangeDrawer : PropertyDrawer
+[CustomPropertyDrawer(typeof(FloatZeroToMaxRangePropertyAttribute))]
+public class FloatZeroToMaxRangeDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        var target = (ZeroToMaxRangePropertyAttribute) attribute;
+        var target = (FloatZeroToMaxRangePropertyAttribute) attribute;
 
         if (property.propertyType == SerializedPropertyType.Float)
         {
             EditorGUI.Slider(position, property, 0, target.max, label);
+        }
+    }
+}
+
+
+[CustomPropertyDrawer(typeof(IntZeroToMaxRangePropertyAttribute))]
+public class IntZeroToMaxRangeDrawer : PropertyDrawer
+{
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+    {
+        var target = (IntZeroToMaxRangePropertyAttribute)attribute;
+
+        if (property.propertyType == SerializedPropertyType.Integer)
+        {
+            EditorGUI.IntSlider(position, property, 0, target.max, label);
         }
     }
 }
