@@ -14,9 +14,11 @@ public class Data
     Color color;
 
     [SerializeField]
-    String name;
+    string name;
+
+    Vector3 destination;
 
     public Color Color { get { return color; } }
 
-    public String Name { get { return name; } }
+    public string Name { get { return name; } }
 }
