@@ -19,10 +19,4 @@ public class CountNumberTextExample : MonoBehaviour
 
         text.text = "Finish!";
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
