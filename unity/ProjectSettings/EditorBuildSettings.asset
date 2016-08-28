@@ -45,3 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DG_tween/tween_alpha_view_group.unity
   - enabled: 1
     path: Assets/Scenes/DG_tween/wait_for_completion_example.unity
+  - enabled: 1
+    path: Assets/Scenes/scene_loader.unity
+  - enabled: 1
+    path: Assets/Scenes/dummy.unity
