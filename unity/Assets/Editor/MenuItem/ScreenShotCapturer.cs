@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScreenShotCapturer
 {
-    [MenuItem("Tools/Capture GameView Screenshot")]
+    [MenuItem("Tools/Capture GameView Screenshot %#C")]
     static void CaptureScreenshot()
     {
         var filename = string.Format("GameView_{0}.png", System.DateTime.Now.ToString("yyyyMMddHHmmss"));
