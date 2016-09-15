@@ -11,6 +11,6 @@ public class UnityEventDataExampleEventEmitter : MonoBehaviour
 
     void Awake()
     {
-        button.onClick.AddListener(() => unityEventData.Invoke(new Data(Color.black, "Black")));
+        button.onClick.AddListener(() => unityEventData.Invoke(new ColorData(Color.black, "Black")));
     }
 }

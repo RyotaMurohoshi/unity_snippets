@@ -2,9 +2,9 @@
 using System;
 
 [Serializable]
-public class Data
+public class ColorData
 {
-    public Data(Color color, string name)
+    public ColorData(Color color, string name)
     {
         this.color = color;
         this.name = name;
@@ -15,8 +15,6 @@ public class Data
 
     [SerializeField]
     string name;
-
-    Vector3 destination;
 
     public Color Color { get { return color; } }
 

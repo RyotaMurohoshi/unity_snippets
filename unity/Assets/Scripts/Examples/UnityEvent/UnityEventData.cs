@@ -2,4 +2,4 @@
 using System;
 
 [Serializable]
-public class UnityEventData : UnityEvent<Data> { }
+public class UnityEventData : UnityEvent<ColorData> { }

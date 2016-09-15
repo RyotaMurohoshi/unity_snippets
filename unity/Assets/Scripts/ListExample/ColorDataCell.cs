@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Cell : MonoBehaviour
+public class ColorDataCell : MonoBehaviour
 {
 	[SerializeField] float height;
 	[SerializeField] Text text;
@@ -11,7 +11,7 @@ public class Cell : MonoBehaviour
 		get { return height; }
 	}
 
-	public Data Data {
+	public ColorData ColorData {
 		set { 
 			text.text = value.Name;
 			background.color = value.Color;
