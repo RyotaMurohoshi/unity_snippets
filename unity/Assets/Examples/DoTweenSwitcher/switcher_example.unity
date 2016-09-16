@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   first: {fileID: 790452413}
-  second: {fileID: 0}
+  second: {fileID: 171674332}
 --- !u!1 &1299945923
 GameObject:
   m_ObjectHideFlags: 0
