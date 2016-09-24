@@ -1,30 +1,39 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using DG.Tweening;
 
 public class EaseTypeExample : MonoBehaviour
 {
     [SerializeField]
+    Ease ease = Ease.Linear;
+    [SerializeField]
     float duration = 1.0F;
     [SerializeField]
-    Ease easeType;
+    Vector3 moveVector = Vector3.up;
     [SerializeField]
-    Button button;
-    [SerializeField]
-    Transform target;
-    [SerializeField]
-    Transform start;
-    [SerializeField]
-    Transform goal;
+    Text text;
 
-    void Start()
+    Vector3 originalPosition;
+
+    void Awake()
     {
-        button.onClick.AddListener(OnClick);
+        this.originalPosition = transform.position;
+        this.text.text = ease.ToString();
     }
 
-    void OnClick()
+    public void MoveAndReset()
     {
-        target.transform.position = start.position;
-        target.DOMove(goal.position, duration).SetEase(easeType);
+        StartCoroutine(MoveAndResetEnumerator());
+    }
+
+    public IEnumerator MoveAndResetEnumerator()
+    {
+        yield return transform
+            .DOMove(originalPosition + moveVector, duration)
+            .SetEase(ease)
+            .WaitForCompletion();
+        yield return new WaitForSeconds(0.3F);
+        transform.position = originalPosition;
     }
 }
