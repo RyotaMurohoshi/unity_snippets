@@ -263,10 +263,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 8
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 1607811299}
@@ -690,10 +690,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -841,10 +841,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 3
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 1889984449}
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 6
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 630211155}
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 5
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 95054751}
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 2
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 389095322}
@@ -1407,10 +1407,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1496,10 +1496,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1839,10 +1839,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2198,7 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 7
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 648835061}
@@ -2480,7 +2480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 4
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 328504714}
@@ -2576,7 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e57d2d4cffd6429a83770e462e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ease: 1
+  ease: 9
   duration: 1
   moveVector: {x: 0, y: 8.8, z: 0}
   text: {fileID: 1145524262}
@@ -2681,10 +2681,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2956,10 +2956,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3063,10 +3063,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
