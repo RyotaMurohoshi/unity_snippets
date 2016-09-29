@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-public class Player
+﻿public class Player
 {
 	public string Name { get; }
 	public int Level { get; }
