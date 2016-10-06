@@ -545,7 +545,7 @@ GameObject:
   - 4: {fileID: 2040432897}
   - 114: {fileID: 2040432896}
   m_Layer: 0
-  m_Name: TextAnimationCancelRx
+  m_Name: TextAnimationCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2040432895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82dcb02c0564c8f44b189864dc101121, type: 3}
+  m_Script: {fileID: 11500000, guid: fc1e20515d0a1954c963ce2883fafd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 954152085}
