@@ -2,8 +2,8 @@
 
 public class PlayerExample : MonoBehaviour
 {
-	void Start ()
-	{
-		Debug.Log(new Player(name:"Ryota", level:28));
-	}
+    void Start()
+    {
+        Debug.Log(new Player(name: "Ryota", level: 28));
+    }
 }
