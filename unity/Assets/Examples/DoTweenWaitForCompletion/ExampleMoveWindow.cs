@@ -5,19 +5,21 @@ public class ExampleMoveWindow : MonoBehaviour
 {
     const float Duration = 0.5F;
 
+    Vector3 defaultPosition;
     void Start()
     {
-        transform.position = new Vector2(transform.position.x, transform.position.y + Screen.height);
+        defaultPosition = transform.position;
+        transform.position = defaultPosition + Vector3.up * Screen.height;
     }
 
     public Tweener Show()
     {
-        return transform.DOMove(Vector3.zero, Duration);
+        return transform.DOMove(defaultPosition, Duration);
     }
 
     public Tweener Hide()
     {
-        return transform.DOMove(Screen.height * Vector2.down, Duration);
+        return transform.DOMove(defaultPosition + Screen.height * Vector3.down, Duration);
     }
 
 }
