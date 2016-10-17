@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 
-public class WaitForComplationExample : MonoBehaviour
+public class PositionMovingWithWaitForComplationExample : MonoBehaviour
 {
     [SerializeField]
     Transform mover;
