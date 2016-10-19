@@ -13,6 +13,18 @@ public class LongTapReaction : MonoBehaviour
     {
         transform.localScale = Vector3.zero;
         yield return transform.DOScale(1.0F * Vector3.one, 0.2F).WaitForCompletion();
-        Destroy(this.gameObject);
     }
+
+    public Coroutine Hide()
+    {
+        return StartCoroutine(HideCorutonine());
+    }
+
+    IEnumerator HideCorutonine()
+    {
+        transform.localScale = Vector3.one;
+        yield return transform.DOScale(1.0F * Vector3.zero, 0.2F).WaitForCompletion();
+        Destroy(gameObject);
+    }
+
 }
