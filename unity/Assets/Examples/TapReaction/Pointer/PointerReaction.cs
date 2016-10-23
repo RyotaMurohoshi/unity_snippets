@@ -29,7 +29,7 @@ public class PointerReaction : MonoBehaviour
 
     IEnumerator HideCorutonine()
     {
-        yield return transform.DOScale(Vector3.zero, scale * 0.1F).WaitForCompletion();
+        yield return transform.DOScale(Vector3.zero, scale * 0.01F).WaitForCompletion();
         Destroy(gameObject);
     }
 }
