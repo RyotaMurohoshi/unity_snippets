@@ -18,9 +18,15 @@ public class PointerController : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         this.UpdateAsObservable()
             .CombineLatest(vector2ReactiveProperty, (_, vec) => vec)
-            .Subscribe(it => {
+            .Subscribe(it =>
+            {
                 target.transform.position += 0.025F * (Vector3)it;
             });
+    }
+
+    void Update()
+    {
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target.transform.position, Time.deltaTime);
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
@@ -58,6 +64,7 @@ public class PointerController : MonoBehaviour, IPointerDownHandler, IPointerUpH
         var tapReaction = Instantiate(reactionPrefab);
         tapReaction.transform.position = Camera.main.ScreenToWorldPoint(position);
         tapReaction.Show();
+        tapReaction.transform.parent = Camera.main.transform;
         return tapReaction;
     }
 }
