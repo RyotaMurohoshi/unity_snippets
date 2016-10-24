@@ -24,11 +24,6 @@ public class PointerController : MonoBehaviour, IPointerDownHandler, IPointerUpH
             });
     }
 
-    void Update()
-    {
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target.transform.position, Time.deltaTime);
-    }
-
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
         currentReaction = CreateReaction(eventData.position);
