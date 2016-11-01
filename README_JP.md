@@ -1,4 +1,4 @@
-# MrStarBase
+# unity_snippets
 
 Unity用のコードスニペット集です。
 

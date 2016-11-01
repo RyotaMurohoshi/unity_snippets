@@ -1,4 +1,4 @@
-# MrStarBase
+# unity_snippets
 
 Code snippets for Unity.
 
