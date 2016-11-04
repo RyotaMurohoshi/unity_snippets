@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-// Tested with 5.4.0b16
 namespace MrStarBase
 {
     public class JsonTest
