@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d723d16b825a4debb058d96330eace8, type: 3}
+  m_Name: RoadTile
+  m_EditorClassIdentifier: 
+  m_Sprites:
+  - {fileID: 21300000, guid: f26e031843c744901b4ca79f7c25aa2b, type: 3}
+  - {fileID: 21300000, guid: 045b07cb5cc46409ca434020af80191b, type: 3}
+  - {fileID: 21300000, guid: 26b928a50cbfa4dc89d68a26f46b78ee, type: 3}
+  - {fileID: 21300000, guid: 962ee90d171624935872c43740b11225, type: 3}
+  - {fileID: 21300000, guid: ae910ef93c8304359986d6efeab6e5d2, type: 3}
+  - {fileID: 21300000, guid: 8db907c17a7ac45e084e16e2e6b4e768, type: 3}
