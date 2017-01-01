@@ -21,30 +21,37 @@ public class TilemapConvertor
     {
         var spritePrefab = Resources.Load<SpriteRenderer>("TileSpriteRenderer");
 
-        var parent = new GameObject("TileParent");
+        var parent = new GameObject("TileParent").transform;
+        var tileAnchor = tilemap.tileAnchor;
+        var tilemapRotation = tilemap.orientationMatrix.rotation;
 
-        foreach (var position in Positions(tilemap.size))
+        foreach (var position in Positions(tilemap.cellBounds))
         {
-            var tile = tilemap.GetTile(position);
-            if (tile != null)
+            if (tilemap.HasTile(position))
             {
-                var worldPosition = tilemap.CellToWorld(position) + tilemap.tileAnchor;
-                var matrix = tilemap.GetTransformMatrix(position);
+                var tile = tilemap.GetTile(position);
+                var spriteRotation = tilemap.GetTransformMatrix(position).rotation;
+                var rotation = tilemapRotation * spriteRotation;
+                var localPosition = tilemap.CellToLocal(position) + tileAnchor;
                 var spriteRenderer = GameObject.Instantiate(
-                    spritePrefab, worldPosition, matrix.rotation, parent.transform);
+                    spritePrefab,
+                    localPosition,
+                    rotation,
+                    parent);
 
+                spriteRenderer.name = position.ToString();
                 spriteRenderer.sprite = tilemap.GetSprite(position);
             }
         }
     }
 
-    static IEnumerable<Vector3Int> Positions(Vector3Int size)
+    static IEnumerable<Vector3Int> Positions(BoundsInt bounds)
     {
-        for (int x = -size.x; x <= size.x; x++)
+        for (int x = bounds.xMin; x <= bounds.xMax; x++)
         {
-            for (int y = -size.y; y <= size.y; y++)
+            for (int y = bounds.yMin; y <= bounds.yMax; y++)
             {
-                for (int z = -size.z; z <= size.z; z++)
+                for (int z = bounds.zMin; z <= bounds.zMax; z++)
                 {
                     yield return new Vector3Int(x, y, z);
                 }
