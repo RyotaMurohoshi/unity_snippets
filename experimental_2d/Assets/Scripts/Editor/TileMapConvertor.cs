@@ -1,19 +1,18 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor;
-using System.Collections.Generic;
 
 public class TilemapConvertor
 {
     [MenuItem("Assets/Convert TileMap to Sprites")]
     public static void Convert()
     {
-        var grid = Selection.objects.OfType<GameObject>().Select(it => it.GetComponent<Grid>()).First();
-
-        foreach (var tilemap in grid.GetComponentsInChildren<Tilemap>())
+        foreach (var grid in GameObject.FindObjectsOfType<Grid>())
         {
-            Update(tilemap);
+            foreach (var tilemap in grid.GetComponentsInChildren<Tilemap>())
+            {
+                Update(tilemap);
+            }
         }
     }
 
@@ -22,39 +21,24 @@ public class TilemapConvertor
         var spritePrefab = Resources.Load<SpriteRenderer>("TileSpriteRenderer");
 
         var parent = new GameObject("TileParent").transform;
-        var tileAnchor = tilemap.tileAnchor;
         var tilemapRotation = tilemap.orientationMatrix.rotation;
+        var tileAnchor = tilemap.orientationMatrix.MultiplyPoint(tilemap.tileAnchor);
 
-        foreach (var position in Positions(tilemap.cellBounds))
+        foreach (var position in tilemap.cellBounds.allPositionsWithin)
         {
             if (tilemap.HasTile(position))
             {
-                var tile = tilemap.GetTile(position);
-                var spriteRotation = tilemap.GetTransformMatrix(position).rotation;
-                var rotation = tilemapRotation * spriteRotation;
-                var localPosition = tilemap.CellToLocal(position) + tileAnchor;
+                var matrix = tilemap.orientationMatrix * tilemap.GetTransformMatrix(position);
+                var localPosition = tilemap.CellToWorld(position) + tileAnchor;
                 var spriteRenderer = GameObject.Instantiate(
                     spritePrefab,
                     localPosition,
-                    rotation,
+                    matrix.rotation,
                     parent);
 
+                spriteRenderer.transform.localScale = matrix.scale;
                 spriteRenderer.name = position.ToString();
                 spriteRenderer.sprite = tilemap.GetSprite(position);
-            }
-        }
-    }
-
-    static IEnumerable<Vector3Int> Positions(BoundsInt bounds)
-    {
-        for (int x = bounds.xMin; x <= bounds.xMax; x++)
-        {
-            for (int y = bounds.yMin; y <= bounds.yMax; y++)
-            {
-                for (int z = bounds.zMin; z <= bounds.zMax; z++)
-                {
-                    yield return new Vector3Int(x, y, z);
-                }
             }
         }
     }
