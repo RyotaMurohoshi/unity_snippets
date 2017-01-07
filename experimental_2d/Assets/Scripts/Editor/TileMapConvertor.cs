@@ -11,12 +11,12 @@ public class TilemapConvertor
         {
             foreach (var tilemap in grid.GetComponentsInChildren<Tilemap>())
             {
-                Update(tilemap);
+                CreateTilemap(tilemap);
             }
         }
     }
 
-    static void Update(Tilemap tilemap)
+    static void CreateTilemap(Tilemap tilemap)
     {
         var spritePrefab = Resources.Load<SpriteRenderer>("TileSpriteRenderer");
 
