@@ -9,18 +9,22 @@ public class TilemapConvertor
     {
         foreach (var grid in GameObject.FindObjectsOfType<Grid>())
         {
+            var gridGameObject = new GameObject("Grid");
+
             foreach (var tilemap in grid.GetComponentsInChildren<Tilemap>())
             {
-                CreateTilemap(tilemap);
+                CreateTilemap(tilemap, gridGameObject);
             }
         }
     }
 
-    static void CreateTilemap(Tilemap tilemap)
+    static void CreateTilemap(Tilemap tilemap, GameObject gridGameObject)
     {
         var spritePrefab = Resources.Load<SpriteRenderer>("TileSpriteRenderer");
 
         var parent = new GameObject("TileParent").transform;
+        parent.transform.parent = gridGameObject.transform;
+
         var tilemapRotation = tilemap.orientationMatrix.rotation;
         var tileAnchor = CalculateTilemapAnchor(tilemap);
 
