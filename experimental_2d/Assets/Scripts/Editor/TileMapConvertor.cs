@@ -5,11 +5,11 @@ using UnityEditor;
 public class TilemapConvertor
 {
     [MenuItem("Assets/Convert TileMap to Sprites")]
-    public static void Convert()
+    public static void ConvertTilemap()
     {
         foreach (var grid in GameObject.FindObjectsOfType<Grid>())
         {
-            var gridGameObject = new GameObject("Grid");
+            var gridGameObject = new GameObject(grid.name);
 
             foreach (var tilemap in grid.GetComponentsInChildren<Tilemap>())
             {
@@ -20,11 +20,10 @@ public class TilemapConvertor
 
     static void CreateTilemap(Tilemap tilemap, GameObject gridGameObject)
     {
-        var spritePrefab = Resources.Load<SpriteRenderer>("TileSpriteRenderer");
-
-        var parent = new GameObject("TileParent").transform;
+        var parent = new GameObject(tilemap.name).transform;
         parent.transform.parent = gridGameObject.transform;
 
+        var tileRenderer = tilemap.GetComponent<TilemapRenderer>();
         var tilemapRotation = tilemap.orientationMatrix.rotation;
         var tileAnchor = CalculateTilemapAnchor(tilemap);
 
@@ -34,16 +33,16 @@ public class TilemapConvertor
             {
                 var matrix = tilemap.orientationMatrix * tilemap.GetTransformMatrix(position);
                 var worldPosition = tilemap.CellToWorld(position) + tileAnchor;
-                var spriteRenderer = GameObject.Instantiate(
-                    spritePrefab,
-                    worldPosition,
-                    matrix.rotation,
-                    parent);
+                var spriteRenderer = new GameObject(position.ToString(), typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
 
+                spriteRenderer.transform.position = worldPosition;
+                spriteRenderer.transform.parent = parent;
+                spriteRenderer.transform.rotation = matrix.rotation;
                 spriteRenderer.transform.localScale = matrix.scale;
-                spriteRenderer.name = position.ToString();
                 spriteRenderer.sprite = tilemap.GetSprite(position);
                 spriteRenderer.sortingOrder = CalculateSortingOrder(tilemap, position);
+                spriteRenderer.color = tilemap.color;
+                spriteRenderer.sortingLayerName = tileRenderer.sortingLayerName;
             }
         }
     }
@@ -71,7 +70,7 @@ public class TilemapConvertor
         var bounds = tilemap.cellBounds;
         if (sortOrder == TilemapRenderer.SortOrder.TopRight)
         {
-            return - (position.x - bounds.xMin) - (position.y - bounds.yMin);
+            return -(position.x - bounds.xMin) - (position.y - bounds.yMin);
         }
         else // TilemapRenderer.SortOrder.BottomLeft
         {
@@ -86,9 +85,8 @@ public class TilemapConvertor
             case Grid.CellLayout.Rectangle:
                 return CalculateRectangleTilemapAnchor(tilemap);
             case Grid.CellLayout.Isometric:
-                return CalculateIsometricTilemapAnchor(tilemap);
             case Grid.CellLayout.IsometricZAsY:
-                return CalculateIsometricZAsYTilemapAnchor(tilemap);
+                return CalculateIsometricTilemapAnchor(tilemap);
             default:
                 Debug.LogWarningFormat("Cannot calculate anchor Grid.CellLayout : {0}", tilemap.cellLayout);
                 return Vector3.zero;
@@ -107,17 +105,6 @@ public class TilemapConvertor
         var yVector = new Vector3(-gridCellSize.x, gridCellSize.y, 0.0F);
         var anchor = tilemap.tileAnchor;
         var result = (anchor.x * xVector + anchor.y * yVector) / 2;
-
-        return result;
-    }
-
-    static Vector3 CalculateIsometricZAsYTilemapAnchor(Tilemap tilemap)
-    {
-        var gridCellSize = tilemap.LayoutGrid.cellSize;
-        var xVector = new Vector3(gridCellSize.x, 0.0F, gridCellSize.y);
-        var zAsYVector = new Vector3(-gridCellSize.x, 0.0F, gridCellSize.y);
-        var anchor = tilemap.tileAnchor;
-        var result = (anchor.x * xVector + anchor.y * zAsYVector) / 2;
 
         return result;
     }
