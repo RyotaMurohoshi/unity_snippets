@@ -9,7 +9,7 @@ public class TilemapConvertor
     {
         foreach (var grid in GameObject.FindObjectsOfType<Grid>())
         {
-            var gridGameObject = new GameObject("Grid");
+            var gridGameObject = new GameObject(grid.name);
 
             foreach (var tilemap in grid.GetComponentsInChildren<Tilemap>())
             {
@@ -20,7 +20,7 @@ public class TilemapConvertor
 
     static void CreateTilemap(Tilemap tilemap, GameObject gridGameObject)
     {
-        var parent = new GameObject("TileParent").transform;
+        var parent = new GameObject(tilemap.name).transform;
         parent.transform.parent = gridGameObject.transform;
 
         var tilemapRotation = tilemap.orientationMatrix.rotation;
