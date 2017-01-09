@@ -5,7 +5,7 @@ using UnityEditor;
 public class TilemapConvertor
 {
     [MenuItem("Assets/Convert TileMap to Sprites")]
-    public static void Convert()
+    public static void ConvertTilemap()
     {
         foreach (var grid in GameObject.FindObjectsOfType<Grid>())
         {
@@ -23,6 +23,7 @@ public class TilemapConvertor
         var parent = new GameObject(tilemap.name).transform;
         parent.transform.parent = gridGameObject.transform;
 
+        var tileRenderer = tilemap.GetComponent<TilemapRenderer>();
         var tilemapRotation = tilemap.orientationMatrix.rotation;
         var tileAnchor = CalculateTilemapAnchor(tilemap);
 
@@ -40,6 +41,8 @@ public class TilemapConvertor
                 spriteRenderer.transform.localScale = matrix.scale;
                 spriteRenderer.sprite = tilemap.GetSprite(position);
                 spriteRenderer.sortingOrder = CalculateSortingOrder(tilemap, position);
+                spriteRenderer.color = tilemap.color;
+                spriteRenderer.sortingLayerName = tileRenderer.sortingLayerName;
             }
         }
     }
