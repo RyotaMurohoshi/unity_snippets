@@ -82,9 +82,8 @@ public class TilemapConvertor
             case Grid.CellLayout.Rectangle:
                 return CalculateRectangleTilemapAnchor(tilemap);
             case Grid.CellLayout.Isometric:
-                return CalculateIsometricTilemapAnchor(tilemap);
             case Grid.CellLayout.IsometricZAsY:
-                return CalculateIsometricZAsYTilemapAnchor(tilemap);
+                return CalculateIsometricTilemapAnchor(tilemap);
             default:
                 Debug.LogWarningFormat("Cannot calculate anchor Grid.CellLayout : {0}", tilemap.cellLayout);
                 return Vector3.zero;
@@ -103,17 +102,6 @@ public class TilemapConvertor
         var yVector = new Vector3(-gridCellSize.x, gridCellSize.y, 0.0F);
         var anchor = tilemap.tileAnchor;
         var result = (anchor.x * xVector + anchor.y * yVector) / 2;
-
-        return result;
-    }
-
-    static Vector3 CalculateIsometricZAsYTilemapAnchor(Tilemap tilemap)
-    {
-        var gridCellSize = tilemap.LayoutGrid.cellSize;
-        var xVector = new Vector3(gridCellSize.x, 0.0F, gridCellSize.y);
-        var zAsYVector = new Vector3(-gridCellSize.x, 0.0F, gridCellSize.y);
-        var anchor = tilemap.tileAnchor;
-        var result = (anchor.x * xVector + anchor.y * zAsYVector) / 2;
 
         return result;
     }
