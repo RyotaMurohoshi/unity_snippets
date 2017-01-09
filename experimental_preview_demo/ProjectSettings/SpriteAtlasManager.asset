@@ -1,0 +1,742 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!365 &1
+SpriteAtlasManager:
+  m_ObjectHideFlags: 0
+  m_AtlasAssets:
+  - {fileID: 36400000, guid: 9f4468f7cd1f84d4e8859c90fd766dab, type: 2}
+  - {fileID: 36400000, guid: bb848357bd9e5794fbb99d4062b1f826, type: 2}
+  - {fileID: 36400000, guid: ae7ef39e4a14b99448a0b139eec30408, type: 2}
+  - {fileID: 36400000, guid: de67db44272fdbb41ad95712a417a874, type: 2}
+  - {fileID: 36400000, guid: 73afbd805b22b42489ae8c7bde3f9f83, type: 2}
+  m_AllSpriteAtlases:
+    obstacle:
+    - {fileID: 36400000, guid: 9f4468f7cd1f84d4e8859c90fd766dab, type: 2}
+    Characters:
+    - {fileID: 36400000, guid: de67db44272fdbb41ad95712a417a874, type: 2}
+    - {fileID: 36400000, guid: 73afbd805b22b42489ae8c7bde3f9f83, type: 2}
+    sushi:
+    - {fileID: 36400000, guid: ae7ef39e4a14b99448a0b139eec30408, type: 2}
+    Isometric:
+    - {fileID: 36400000, guid: bb848357bd9e5794fbb99d4062b1f826, type: 2}
+  m_SpriteRenderDataKeyToTags:
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300082
+      second:
+      - Isometric
+    data:
+      first:
+        c194c5dedaa8f2d41978f308794b26ac: 21300000
+      second:
+      - obstacle
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300076
+      second:
+      - Isometric
+    data:
+      first:
+        dc8545d09a8f712438440078cec8b567: 21300000
+      second:
+      - sushi
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300026
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300104
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300002
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300106
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300056
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300060
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300012
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300068
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300110
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300012
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300000
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300004
+      second:
+      - Characters
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300032
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300072
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300024
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300020
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300078
+      second:
+      - Isometric
+    data:
+      first:
+        41a5ff958aea51248bd1bb22ec78bb2d: 21300006
+      second:
+      - sushi
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300044
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300022
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300124
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300046
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300030
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300062
+      second:
+      - Isometric
+    data:
+      first:
+        41a5ff958aea51248bd1bb22ec78bb2d: 21300008
+      second:
+      - sushi
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300056
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300024
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300080
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300076
+      second:
+      - Isometric
+    data:
+      first:
+        88ecf4e54e5eeb948ba15a9a04a8ecc7: 21300000
+      second:
+      - obstacle
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300074
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300122
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300066
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300016
+      second:
+      - Characters
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300040
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300090
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300038
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300040
+      second:
+      - Isometric
+    data:
+      first:
+        855d4b29f9bc313488bbeb1a68643c0a: 21300000
+      second:
+      - obstacle
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300096
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300046
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300086
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300090
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300080
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300054
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300072
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300022
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300034
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300098
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300018
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300100
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300038
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300016
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300112
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300106
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300086
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300088
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300018
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300008
+      second:
+      - Characters
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300118
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300026
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300054
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300016
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300084
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300000
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300028
+      second:
+      - Isometric
+    data:
+      first:
+        dc8545d09a8f712438440078cec8b567: 21300004
+      second:
+      - sushi
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300096
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300104
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300120
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300052
+      second:
+      - Isometric
+    data:
+      first:
+        320549cb219756a47930ba251eddcbab: 21300000
+      second:
+      - obstacle
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300010
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300036
+      second:
+      - Isometric
+    data:
+      first:
+        41a5ff958aea51248bd1bb22ec78bb2d: 21300000
+      second:
+      - sushi
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300092
+      second:
+      - Isometric
+    data:
+      first:
+        64192f3a559742b46b850be58d6b3142: 21300000
+      second:
+      - obstacle
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300098
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300028
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300048
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300008
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300070
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300034
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300094
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300004
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300108
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300050
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300000
+      second:
+      - Characters
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300064
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300062
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300044
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300014
+      second:
+      - Isometric
+    data:
+      first:
+        8db8f7a98aa9bf64f827872a81c1f770: 21300000
+      second:
+      - Characters
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300042
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300074
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300010
+      second:
+      - Characters
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300114
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300064
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300042
+      second:
+      - Isometric
+    data:
+      first:
+        dc8545d09a8f712438440078cec8b567: 21300002
+      second:
+      - sushi
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300102
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300032
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300002
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300052
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300006
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300078
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300100
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300018
+      second:
+      - Characters
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300092
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300094
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300004
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300116
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300002
+      second:
+      - Characters
+    data:
+      first:
+        f8050f2d15ee6564ea74949a9725e014: 21300000
+      second:
+      - Characters
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300006
+      second:
+      - Characters
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300108
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300020
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300006
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300068
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300014
+      second:
+      - Characters
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300058
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300010
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300084
+      second:
+      - Isometric
+    data:
+      first:
+        8d66ee664835ec64585ed660df3750ae: 21300012
+      second:
+      - Characters
+    data:
+      first:
+        41a5ff958aea51248bd1bb22ec78bb2d: 21300004
+      second:
+      - sushi
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300050
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300060
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300066
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300102
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300008
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300036
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300088
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300070
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300014
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300082
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300058
+      second:
+      - Isometric
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300048
+      second:
+      - Isometric
+    data:
+      first:
+        de1bc1cc0a4d81d46a53bdd13861d12a: 21300126
+      second:
+      - Isometric
+    data:
+      first:
+        41a5ff958aea51248bd1bb22ec78bb2d: 21300002
+      second:
+      - sushi
+    data:
+      first:
+        47521f362d550d64499dfbf056e581cd: 21300030
+      second:
+      - Isometric
