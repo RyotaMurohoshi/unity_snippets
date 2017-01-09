@@ -20,8 +20,6 @@ public class TilemapConvertor
 
     static void CreateTilemap(Tilemap tilemap, GameObject gridGameObject)
     {
-        var spritePrefab = Resources.Load<SpriteRenderer>("TileSpriteRenderer");
-
         var parent = new GameObject("TileParent").transform;
         parent.transform.parent = gridGameObject.transform;
 
@@ -34,14 +32,12 @@ public class TilemapConvertor
             {
                 var matrix = tilemap.orientationMatrix * tilemap.GetTransformMatrix(position);
                 var worldPosition = tilemap.CellToWorld(position) + tileAnchor;
-                var spriteRenderer = GameObject.Instantiate(
-                    spritePrefab,
-                    worldPosition,
-                    matrix.rotation,
-                    parent);
+                var spriteRenderer = new GameObject(position.ToString(), typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
 
+                spriteRenderer.transform.position = worldPosition;
+                spriteRenderer.transform.parent = parent;
+                spriteRenderer.transform.rotation = matrix.rotation;
                 spriteRenderer.transform.localScale = matrix.scale;
-                spriteRenderer.name = position.ToString();
                 spriteRenderer.sprite = tilemap.GetSprite(position);
                 spriteRenderer.sortingOrder = CalculateSortingOrder(tilemap, position);
             }
@@ -71,7 +67,7 @@ public class TilemapConvertor
         var bounds = tilemap.cellBounds;
         if (sortOrder == TilemapRenderer.SortOrder.TopRight)
         {
-            return - (position.x - bounds.xMin) - (position.y - bounds.yMin);
+            return -(position.x - bounds.xMin) - (position.y - bounds.yMin);
         }
         else // TilemapRenderer.SortOrder.BottomLeft
         {
